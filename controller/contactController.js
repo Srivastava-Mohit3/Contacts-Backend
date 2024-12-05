@@ -66,4 +66,6 @@ const deleteContact = asyncHandler(async (req, res) => {
     res.status(200).json(foundContact)
 })
 
+// crud operation performed
+
 module.exports = {getContacts, getContact, addContact, updateContact, deleteContact}
