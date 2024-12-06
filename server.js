@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 
 const contactRoutes = require('./routes/contactRoutes')
+const usersRoutes = require('./routes/usersRoutes')
 const messageRoutes = require('./routes/messageRoutes')
 const errorHandler = require('./middleware/errorHandler')
 const connectDb = require('./config/dbConnection')
@@ -15,6 +16,7 @@ app.use(express.json()) //body parser(middle ware used to access the data which 
 // app.use(errorHandler)
 
 app.use("/api/contacts", contactRoutes)
+app.use("/api/users", usersRoutes)
 app.use("/", messageRoutes)
 
 app.use(errorHandler)
